@@ -1,0 +1,141 @@
+[
+  {
+    "id": "prod-1",
+    "slug": "wireless-headphones",
+    "name": "Premium Wireless Headphones",
+    "price": 199.99,
+    "description": "Noise-cancelling over-ear headphones with 30-hour battery life and Bluetooth 5.0 connectivity.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_116f0026448d12885a4eeaf7a883205b.webp",
+    "category": "audio",
+    "inventory": 15,
+    "rating": 4.8,
+    "features": [
+      "Active Noise Cancellation",
+      "30-hour playtime",
+      "Built-in microphone",
+      "Foldable design"
+    ]
+  },
+  {
+    "id": "prod-2",
+    "slug": "electronic-drone",
+    "name": "Drone",
+    "price": 129.99,
+    "description": "Split design mechanical keyboard with RGB lighting and customizable macro keys.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_31609c596ebab30f7d615c3b199bc01c.webp",
+    "category": "accessories",
+    "inventory": 8,
+    "rating": 4.6,
+    "features": [
+      "Cherry MX switches",
+      "RGB backlighting",
+      "Wrist rest included",
+      "USB-C connectivity"
+    ]
+  },
+  {
+    "id": "prod-3",
+    "slug": "smart-watch",
+    "name": "Fitness Smart Watch",
+    "price": 159.99,
+    "description": "Health and fitness tracker with heart rate monitoring and GPS tracking.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_b08de88ab50a731d7e9dbcabea3e21fb.webp",
+    "category": "wearables",
+    "inventory": 12,
+    "rating": 4.5,
+    "features": [
+      "24/7 heart rate monitoring",
+      "Water resistant",
+      "7-day battery life",
+      "50+ sport modes"
+    ]
+  },
+  {
+    "id": "prod-4",
+    "slug": "portable-speaker",
+    "name": "Bluetooth Portable Speaker",
+    "price": 89.99,
+    "description": "Compact waterproof speaker with 20W output and deep bass.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_a26a0acc4fb1074885c04da2b215f7f8.webp",
+    "category": "audio",
+    "inventory": 20,
+    "rating": 4.7,
+    "features": [
+      "IP67 waterproof",
+      "20-hour playtime",
+      "Bluetooth 5.2",
+      "Built-in microphone"
+    ]
+  },
+  {
+    "id": "prod-5",
+    "slug": "gaming-mouse",
+    "name": "Wireless Gaming Mouse",
+    "price": 79.99,
+    "description": "High-precision gaming mouse with customizable DPI and programmable buttons.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_47aa1aacb27c09c0bf6421c484e0c8aa.webp",
+    "category": "accessories",
+    "inventory": 10,
+    "rating": 4.4,
+    "features": [
+      "16,000 DPI sensor",
+      "6 programmable buttons",
+      "RGB lighting",
+      "50-hour battery"
+    ]
+  },
+  {
+    "id": "prod-6",
+    "slug": "laptop",
+    "name": " Laptop",
+    "price": 49.99,
+    "description": "Ergonomic stand that raises your laptop to eye level for better posture.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_047de71a252ebb43bec90463cb033886.webp",
+    "category": "accessories",
+    "inventory": 25,
+    "rating": 4.3,
+    "features": [
+      "Aluminum construction",
+      "360° rotation",
+      "Fits laptops up to 17\"",
+      "Foldable design"
+    ]
+  },
+  {
+    "id": "prod-7",
+    "slug": "power-bank",
+    "name": "20,000mAh Power Bank",
+    "price": 59.99,
+    "description": "High-capacity portable charger with fast charging for multiple devices.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_4ef66692ece568982169ffae316c7b5c.webp",
+    "category": "accessories",
+    "inventory": 18,
+    "rating": 4.6,
+    "features": [
+      "20,000mAh capacity",
+      "USB-C PD 30W",
+      "3 output ports",
+      "LED power indicator"
+    ]
+  },
+  {
+    "id": "prod-8",
+    "slug": "gaming-headset",
+    "name": "Gaming Headset",
+    "price": 89.99,
+    "description": "Over-ear gaming headset with surround sound and noise-cancelling microphone.",
+    "image": "https://file.aiquickdraw.com/imgcompressed/img/compressed_382c12caf1e2bcbb590d86ad96d937ec.webp",
+    "category": "audio",
+    "inventory": 14,
+    "rating": 4.5,
+    "features": [
+      "7.1 surround sound",
+      "Noise-cancelling mic",
+      "Adjustable headband",
+      "RGB lighting"
+    ]
+  }
+
+]
+
+
