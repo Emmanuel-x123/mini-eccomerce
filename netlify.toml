@@ -1,20 +1,26 @@
-# example netlify.toml
 [build]
   command = "npm run build"
   publish = ".next"
+  environment = { NODE_VERSION = "18" }
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app.
-  ## Not needed for static site generators.
-  #[[redirects]]
-  #  from = "/*"
-  #  to = "/index.html"
-  #  status = 200
+# Required for Next.js on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-  ## (optional) Settings for Netlify Dev
-  ## https://github.com/netlify/cli/blob/main/docs/netlify-dev.md#project-detection
-  #[dev]
-  #  command = "yarn start" # Command to start your dev server
-  #  port = 3000 # Port that the dev server will be listening on
-  #  publish = "dist" # Folder with the static content for _redirect file
+# Explicit Edge Functions declaration (optional but recommended)
+[[edge_functions]]
+  path = "/*"
+  function = "middleware"
 
-  ## more info on configuring this file: https://ntl.fyi/file-based-build-config
+# Next.js image optimization redirects
+[[redirects]]
+  from = "/_next/image"
+  query = { url = ":url", w = ":width", q = ":quality" }
+  to = "/.netlify/images?url=:url&w=:width&q=:quality"
+  status = 200
+
+[[redirects]]
+  from = "/_ipx/*"
+  query = { url = ":url", w = ":width", q = ":quality" }
+  to = "/.netlify/images?url=:url&w=:width&q=:quality"
+  status = 200
