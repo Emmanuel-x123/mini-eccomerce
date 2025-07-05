@@ -4,26 +4,37 @@ import tsParser from "@typescript-eslint/parser";
 
 export default [
   {
-    // For TypeScript files
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parser: tsParser,
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
     },
     plugins: {
       "@typescript-eslint": tseslint,
       "@next/next": next,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
+      // Next.js rules
       ...next.configs.recommended.rules,
       ...next.configs["core-web-vitals"].rules,
+      
+      // TypeScript rules
+      ...tseslint.configs.recommended.rules,
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-    }
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { 
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_"
+        }
+      ],
+      "@typescript-eslint/no-empty-object-type": "error",
+      
+      // Custom rules
+      "react/no-unknown-property": ["error", { "ignore": ["css"] }],
+    },
   },
-  {
-    // For JavaScript files (optional)
-    files: ["**/*.js", "**/*.jsx"],
-    // ... your JS rules
-  }
 ];
