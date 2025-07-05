@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
-import toast from 'react-hot-toast';
 import { useUIStore } from '@/store/uiStore';
 import { useCartStore } from '@/store/cartStore';
 import Image from 'next/image';
