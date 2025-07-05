@@ -2,13 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { PropsWithChildren } from 'react';
 
-interface LayoutProps {
-  // Add other properties here if needed
-}
-
-const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='layout'>
       <Head>
@@ -28,5 +23,7 @@ const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
 };
 
 export default Layout;
+
+
 
 
