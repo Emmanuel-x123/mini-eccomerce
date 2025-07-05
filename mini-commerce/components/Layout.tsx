@@ -2,12 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Navbar from './Navbar';
 import Footer from './Footer';
-
-
-
 import { PropsWithChildren } from 'react';
 
-const Layout = ({ children }: PropsWithChildren<{}>) => {
+interface LayoutProps {
+  // Add other properties here if needed
+}
+
+const Layout = ({ children }: PropsWithChildren<LayoutProps>) => {
   return (
     <div className='layout'>
       <Head>
@@ -20,11 +21,12 @@ const Layout = ({ children }: PropsWithChildren<{}>) => {
         {children}
       </main>
       <footer className='footer'>
-        
         <Footer />
       </footer>
     </div>
-  )
-}
+  );
+};
 
 export default Layout;
+
+
