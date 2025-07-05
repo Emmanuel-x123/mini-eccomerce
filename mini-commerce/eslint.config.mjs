@@ -2,6 +2,7 @@ import next from "@next/eslint-plugin-next";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import reactPlugin from "eslint-plugin-react";
+import globals from "globals";
 
 export default [
   {
@@ -10,9 +11,18 @@ export default [
       parser: tsParser,
       parserOptions: {
         project: "./tsconfig.json",
-        ecmaFeatures: {
-          jsx: true
-        }
+        ecmaFeatures: { jsx: true },
+        ecmaVersion: "latest",
+        sourceType: "module"
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    },
+    settings: {
+      react: {
+        version: "detect" // Automatically detect React version
       }
     },
     plugins: {
@@ -38,10 +48,10 @@ export default [
       
       // React rules
       ...reactPlugin.configs["recommended"].rules,
-      "react/no-unknown-property": ["error", { "ignore": ["css"] }],
-      
-      // Custom rules
-      "@typescript-eslint/no-empty-object-type": "off" // Disable if too strict
+      ...reactPlugin.configs["jsx-runtime"].rules,
+      "react/react-in-jsx-scope": "off", // Disabled for React 17+
+      "react/jsx-uses-react": "off", // Disabled for React 17+
+      "react/no-unknown-property": ["error", { "ignore": ["css"] }]
     }
   }
 ];

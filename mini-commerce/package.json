@@ -23,6 +23,7 @@
     "@netlify/plugin-nextjs": "^5.11.4",
     "@next/eslint-plugin-next": "^15.3.5",
     "@tailwindcss/postcss": "^4",
+    "@types/jest": "^30.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
