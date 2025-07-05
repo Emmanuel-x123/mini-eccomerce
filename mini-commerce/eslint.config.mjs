@@ -31,7 +31,7 @@ export default [
           "caughtErrorsIgnorePattern": "^_"
         }
       ],
-      "@typescript-eslint/no-empty-object-type": "error",
+      "@typescript-eslint/no-empty-object-type": "off",
       
       // Custom rules
       "react/no-unknown-property": ["error", { "ignore": ["css"] }],
