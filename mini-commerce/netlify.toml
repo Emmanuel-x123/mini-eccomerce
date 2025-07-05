@@ -1,0 +1,15 @@
+[build]
+  # Remove base directory if you're not using a monorepo
+  command = "npm run build"
+  publish = "out"
+  # functions = "netlify/functions"  # Only uncomment if using serverless functions
+
+[dev]
+  framework = "next"
+  targetPort = 3000
+  command = "npm run dev"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
