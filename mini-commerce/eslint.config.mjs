@@ -1,17 +1,29 @@
-// eslint.config.js
 import next from "@next/eslint-plugin-next";
-import tseslint from "typescript-eslint";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsParser from "@typescript-eslint/parser";
 
 export default [
-  ...tseslint.configs.recommended,
   {
-    plugins: { "@next/next": next },
+    // For TypeScript files
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsParser,
+    },
+    plugins: {
+      "@typescript-eslint": tseslint,
+      "@next/next": next,
+    },
     rules: {
+      ...tseslint.configs.recommended.rules,
       ...next.configs.recommended.rules,
       ...next.configs["core-web-vitals"].rules,
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-      "react/no-unknown-property": ["error", { "ignore": ["css"] }],
-    },
+    }
   },
+  {
+    // For JavaScript files (optional)
+    files: ["**/*.js", "**/*.jsx"],
+    // ... your JS rules
+  }
 ];
